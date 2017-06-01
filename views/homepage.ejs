@@ -1,0 +1,39 @@
+<div class="default-page">
+  <div id="app">
+    <modal-alert>
+    </modal-alert>
+
+    <app-container>
+      <app-header
+        slot="header"
+        title="Median Household Income In California">
+
+        <a class="nav-item" partial="about">
+          About
+        </a>
+        <a class="nav-item" partial="credit">
+          Credit
+        </a>
+        <a class="nav-item" partial="me">
+          Other Work
+        </a>
+        <span class="nav-item">
+          <a class="button">
+            <span class="icon">
+              <span class="fa fa-heart"></span>
+            </span>
+            <span>Donate</span>
+          </a>
+        </span>
+      </app-header>
+
+      <!--<app-body slot="content">-->
+        <mapbox-map slot="content"
+          uri='mapbox://styles/thebradbain/cj31ao2p200082roh7nabvqcs'
+          :show-legend='true'>
+        </mapbox-map>
+      <!--</app-body>-->
+
+    </app-container>
+  </div>
+</div>

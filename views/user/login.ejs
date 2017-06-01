@@ -1,0 +1,32 @@
+<div class="default-page">
+  <section>
+    <form id="loginForm">
+      <h1>Login</h1>
+      <label>Username <input name="username" type="text"></label>
+      <label>Password <input name="password" type="text"></label>
+      <button type="submit">POST</button>
+    </form>
+  </section>
+
+  <script>
+    const formToJSON = elements => [].reduce.call(elements, (data, element) => {
+      data[element.name] = element.value;
+      return data;
+
+    }, {});
+
+    const handleSubmit = e => {
+      e.preventDefault();
+      const data =  formToJSON(form.elements);
+
+      fetch('/login', {
+        method: 'POST',
+        credentials: 'include',
+        body: JSON.stringify(data),
+      }).then((res) => {console.log(res)});
+    };
+
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', handleSubmit);
+  </script>
+</div>

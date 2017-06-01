@@ -1,0 +1,31 @@
+<div class="default-page">
+  <section>
+    <form id="uploadForm">
+      <h1>Upload File Data</h1>
+      <label>Zipcode <input name="zip" type="text"></label>
+      <button type="submit">POST</button>
+    </form>
+  </section>
+
+  <script>
+    const formToJSON = elements => [].reduce.call(elements, (data, element) => {
+      data[element.name] = element.value;
+      return data;
+
+    }, {});
+
+    const handleSubmit = e => {
+      e.preventDefault();
+      const data =  formToJSON(form.elements);
+
+      fetch('/map/uploadIncomeData', {
+        method: 'POST',
+        credentials: 'include',
+        body: JSON.stringify(data),
+      }).then((res) => {console.log(res)});
+    };
+
+    const form = document.getElementById('uploadForm');
+    form.addEventListener('submit', handleSubmit);
+  </script>
+</div>

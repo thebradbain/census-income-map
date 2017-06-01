@@ -1,0 +1,100 @@
+html, body, .default-page, #app {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-card-head-simple {
+  flex-direction: row-reverse;
+  background-color: white;
+  border: none;
+}
+
+.modal-card-body-simple {
+  padding: 0 20px 20px;
+  padding-top: 0;
+  border-radius: 5px;
+}
+
+.modal {
+  z-index: -1;
+}
+
+.modal.is-active {
+  z-index: 100;
+}
+
+#app-container {
+  position: relative;
+  height: 100%;
+  max-height: 100%;
+}
+
+#app-header {
+  position: fixed;
+  left:0;
+  right: 0;
+  z-index: 50;
+}
+
+#app-body {
+  width: 100%;
+  height: 100%;
+}
+
+#app-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+#map-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+#map {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.legend {
+    /* HACK: Account for fixed navbar height */
+    margin-top: 60px !important;
+    padding: 10px;
+}
+
+.legend h4 {
+    margin: 0 0 10px;
+}
+
+.legend .income-level {
+  width: 100%;
+}
+
+.legend .income-level span {
+    border-radius: 50%;
+    display: inline;
+    height: 10px;
+    margin-right: 5px;
+    position: relative;
+}
+
+.legend .income-level .k250 {
+    float: right;
+    text-align: right;
+}
+
+.spectrum {
+    height: 20px;
+    width: 150px;
+
+    /*background: -moz-linear-gradient(left, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
+    background: -ms-linear-gradient(left, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
+    background: -o-linear-gradient(left, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff0000), color-stop(0.17, #ffff00), color-stop(0.33, #00ff00), color-stop(0.5, #00ffff), color-stop(0.67, #0000ff), color-stop(0.83, #ff00ff), to(#ff0000));
+    background: -webkit-linear-gradient(top, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);*/
+    background: linear-gradient(to right, #e81717 0%, #e67219 17%, #e5c224 33%, #79dd27 50%, #16f3c3 67%, #1fc8ea 83%, #26abf2 100%);
+}
