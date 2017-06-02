@@ -1,8 +1,11 @@
 {
   "name": "census-income-map",
   "private": true,
-  "version": "0.0.0",
-  "description": "a Sails application",
+  "version": "1.0.0",
+  "description": "Median household income of California by geographic location",
+  "engines": {
+    "node": "7.8.0"
+  },
   "keywords": [],
   "dependencies": {
     "ejs": "2.3.4",
@@ -19,9 +22,12 @@
     "grunt-sails-linker": "~0.10.1",
     "grunt-sync": "0.5.2",
     "include-all": "^1.0.0",
+    "mapbox": "^1.0.0-beta7",
     "rc": "1.0.1",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
+    "rsmq": "^0.8.2",
+    "rsmq-worker": "^0.5.2",
     "sails": "~0.12.13",
     "sails-disk": "~0.10.9",
     "sails-postgresql": "^0.11.4"
