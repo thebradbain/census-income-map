@@ -74,7 +74,7 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  // somePostgresqlServer: {
+  // postgres: {
   //   adapter: 'sails-postgresql',
   //   host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
   //   user: 'YOUR_POSTGRES_USER', // optional

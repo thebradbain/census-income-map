@@ -13,13 +13,21 @@
 module.exports = {
 
   /***************************************************************************
-   * Set the default database connection for models in the development       *
-   * environment (see config/connections.js and config/models.js )           *
+   * Sensitive env variables should go in local.js. They are:
+   *
+   * CENSUS_API_KEY : '',
+   * CENSUS_API_ENDPOINT: '',
+   * CENSUS_YEAR: 2015,
+   * MAPBOX_API_KEY : '',
+   * MAPBOX_DATASET_ID : '',
    ***************************************************************************/
 
-  // models: {
-  //   connection: 'someMongodbServer'
-  // }
+   connections: {
+     postgres: {
+       adapter: 'sails-postgresql',
+       host: 'localhost'
+     }
+   },
 
   redis: {
     server: {
@@ -30,9 +38,5 @@ module.exports = {
       qname: 'uploadQueue'
     }
   },
-
-  postgres: {
-    host: 'localhost'
-  }
 
 };
