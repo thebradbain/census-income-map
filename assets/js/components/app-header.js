@@ -5,6 +5,14 @@ Vue.component('app-header', {
       required: true
     }
   },
+  data: function() {
+    return {
+      isActive: {
+        type: Boolean,
+        default: false
+      }
+    };
+  },
   template: `
   <header class="nav">
       <div class="nav-left">
@@ -12,12 +20,14 @@ Vue.component('app-header', {
           {{title}}
         </h1>
       </div>
-      <span class="nav-toggle">
+      <span :class="{'nav-toggle': true, 'is-active': isActive}"
+            @click="toggleActive">
         <span></span>
         <span></span>
         <span></span>
       </span>
-      <div class="nav-right nav-menu" @click.prevent="click">
+      <div :class="{'nav-right': true, 'nav-menu': true, 'is-active': isActive}"
+           @click.prevent="click">
         <slot></slot>
       </div>
   </header>`,
@@ -29,8 +39,11 @@ Vue.component('app-header', {
 
       eventBus.$emit('show-modal', partialName);
     },
-    donate: function(e) {
-      alert(e);
+    toggleActive: function(e) {
+      this.isActive = !this.isActive;
     }
   },
+  mounted: function() {
+    this.isActive = false;
+  }
 });
