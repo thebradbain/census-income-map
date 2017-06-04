@@ -1,6 +1,6 @@
 Vue.component('app-body', {
   template: `
-    <div>
+    <div id="app-body">
       <slot></slot>
     </div>`,
 });
