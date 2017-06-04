@@ -23,6 +23,10 @@ html, body, .default-page, #app {
   z-index: 100;
 }
 
+.modal-close:before, .modal-close:after {
+  background-color: #00d1b2;
+}
+
 #app-container {
   position: relative;
   height: 100%;
