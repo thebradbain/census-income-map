@@ -28,9 +28,10 @@ Vue.component('mapbox-map', {
         zoom: 8,
         maxBounds: californiaBounds,
         minZoom: 6,
-        zoomControl: false
+        zoomControl: false,
       });
-
+      this.map.attributionControl.addAttribution('© Mapbox');
+      this.map.attributionControl.addAttribution('© OpenStreetMap');
 
       let incomeStyle = L.mapbox.styleLayer('mapbox://styles/thebradbain/cj31ao2p200082roh7nabvqcs');
       incomeStyle.addTo(this.map);
